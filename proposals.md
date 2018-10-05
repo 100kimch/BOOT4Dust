@@ -4,10 +4,6 @@ description: Proposals for this project
 
 # Proposals
 
-{% hint style="warning" %}
-This page is still updating.
-{% endhint %}
-
 ## Drafts
 
 1. Proposal by Kim Jihyeong \(Ver. 180912\)

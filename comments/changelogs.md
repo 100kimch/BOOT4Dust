@@ -1,5 +1,12 @@
 # Changelogs
 
+## 1.0.2 - 2018-10-04
+
+### Added
+
+* [C Study](../guides/c-study.md) added
+* 2nd Minutes Of Meeting added
+
 ## 1.0.1 - 2018-09-16
 
 ### Added

@@ -6,12 +6,14 @@
 ## Documents
 
 * [Initial Plans](documents/summary.md)
+* [Study Plans](documents/study-plans.md)
 * [Environments](documents/environments.md)
 
 ## GUIDES
 
 * [Basic Skills of Linux](guides/basic-skills-of-linux.md)
 * [How-to Github](guides/how-to-github.md)
+* [C Study](guides/c-study.md)
 
 ## Comments
 
