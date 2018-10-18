@@ -83,7 +83,7 @@ description: 인프런 강좌를 통해 C언어를 공부하는 스터디 모임
     * [https://www.sublimetext.com/](https://www.sublimetext.com/)
   * Ubuntu Bash \(Windows 10 Only\)
     * [https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6\#system-requirements](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#system-requirements)
-* 강의 듣고 오 
+* 강의 듣고 오기
 
 ### 수업 준비 방법
 
