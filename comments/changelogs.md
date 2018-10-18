@@ -1,10 +1,21 @@
 # Changelogs
 
+## 1.0.3 - 2018-10-18
+
+### Modified
+
+* [C Study](../study/c-study.md) moved to STUDY Tab
+
+### Added
+
+* [Arduino Introduction](../guides/arduino-introduction.md)
+* [Study Plans](../study/study-plans.md)
+
 ## 1.0.2 - 2018-10-04
 
 ### Added
 
-* [C Study](../guides/c-study.md) added
+* [C Study](../study/c-study.md) added
 * 2nd Minutes Of Meeting added
 
 ## 1.0.1 - 2018-09-16
