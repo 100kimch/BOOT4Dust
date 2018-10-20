@@ -14,16 +14,30 @@ We've started this project from connecting Arduino to GP2Y1010AU0F, fine dust de
 | Breadboard |  |
 | Jumper Cables |  |
 
+See [tutorials of GP2Y1010AU0F](https://m.blog.naver.com/PostView.nhn?blogId=darknisia&logNo=221222455928&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F) and connect GP2Y1010AU0F like:
+
+![](../.gitbook/assets/image%20%281%29.png)
+
+See [tutorials of BHT11](http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/) and connect BHT11 like:
+
+![](../.gitbook/assets/image.png)
+
+{% hint style="warning" %}
+To use dust sensor together, use 5V and GND node on breadboard.
+{% endhint %}
+
 Open Arduino Software and type:
 
 ```c
 #include <dht.h>
 
+// Pin GP2Y1010AU0F
 int V0 = A0;
 int V_LED = 2;
 
 dht DHT;
-int T_sensor = 3;
+// Pin DHT11
+int T_sensor = 7;
 
 
 float V0_value = 0;
