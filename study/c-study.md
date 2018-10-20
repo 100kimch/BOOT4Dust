@@ -75,7 +75,7 @@ description: 인프런 강좌를 통해 C언어를 공부하는 스터디 모임
 
 ### 준비물
 
-* 개인 노트북 및 충전기 \(노트북을 가지고 올 수 없면 미리 알려주세요\)
+* 개인 노트북 및 충전기 \(노트북을 가지고 올 수 없으면 미리 알려주세요\)
 * 소프트웨어:
   * Visual Studio \(any version\) or VSCode
     * [https://visualstudio.microsoft.com/ko/](https://visualstudio.microsoft.com/ko/)

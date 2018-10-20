@@ -13,6 +13,7 @@
 * [Basic Skills of Linux](guides/basic-skills-of-linux.md)
 * [How-to Github](guides/how-to-github.md)
 * [Arduino Introduction](guides/arduino-introduction.md)
+* [Putting Sensors to Arduino](guides/putting-sensors-to-arduino.md)
 
 ## Study
 

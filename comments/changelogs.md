@@ -1,5 +1,11 @@
 # Changelogs
 
+## 1.0.4 - 2018-10-21
+
+### Added
+
+* [Putting Sensors to Arduino](../guides/putting-sensors-to-arduino.md)
+
 ## 1.0.3 - 2018-10-18
 
 ### Modified
