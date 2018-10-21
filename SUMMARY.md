@@ -19,6 +19,7 @@
 
 * [Study Plans](study/study-plans.md)
 * [C Study](study/c-study.md)
+* [C Study - Orientation](study/c-study-orientation.md)
 
 ## Comments
 

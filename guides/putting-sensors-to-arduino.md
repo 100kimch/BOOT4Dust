@@ -16,11 +16,11 @@ We've started this project from connecting Arduino to GP2Y1010AU0F, fine dust de
 
 See [tutorials of GP2Y1010AU0F](https://m.blog.naver.com/PostView.nhn?blogId=darknisia&logNo=221222455928&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F) and connect GP2Y1010AU0F like:
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%282%29.png)
 
 See [tutorials of BHT11](http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/) and connect BHT11 like:
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 {% hint style="warning" %}
 To use dust sensor together, use 5V and GND node on breadboard.
@@ -84,6 +84,7 @@ void loop() {
 //    Serial.print(err);
     Serial.println();
   }
+}
 ```
 
 ![](../.gitbook/assets/2018-10-21-2.29.15.png)
@@ -94,7 +95,7 @@ Here's the result on serial monitor:
 
 ![Part of SHARP GP2Y1010AU0F Datasheet](../.gitbook/assets/2018-10-21-2.32.57.png)
 
-According to GP2Y1010AU0F datasheet,  Output voltage at no dust is between 0 and 1.5 Volts. To get raw voltage value,  multiply the raw value by 5.0 and divide by 1024.0, and subtract the value between 0 - 1.5. The value may different to sensors. To measure the value, make no-dust environment by block the sensing hole and take time to dust sink. Putting the sensor nearby air cleaner is also suggested. 
+According to GP2Y1010AU0F datasheet,  Output voltage at no dust is between 0 and 1.5 Volts. To get raw voltage value,  multiply the raw value by 5.0 and divide by 1024.0, and subtract the value between 0 - 1.5. The value may different to sensors. To measure the value, make no-dust environment by blocking the sensing hole and taking time to dust sink. Putting the sensor nearby air cleaner is also suggested. 
 
 ```c
   Voltage = V0_value * 5.0 / 1024.0;
