@@ -16,20 +16,20 @@ description: 인프런 강좌를 통해 C언어를 공부하는 스터디 모임
 {% tab title="주요 강의" %}
 5.1 – if 문  
 5.2 – if문 활용과 switch문 ~ case문  
-6.1 – while, for, do~while  
-7.1 – 함수의 작성과 사용  
-8.1 – 배열의 선언과 사용  
-8.2 – 문자를 저장하는 배열  
-9.1 – 포인터의 기본 개념  
-10.1 – 배열과 포인터의 관계  
-10.2 – 배열을 처리하는 함수  
-12.1 – 문자열과 포인터  
-13.1 – 변수 사용 영역  
-13.2 – 함수의 데이터 공유 방법  
-14.1 – 2차원 배열  
-17.1 – 구조체  
-18.1 – 파일 개방과 입출력  
-19.1 – 전처리 지시자 \(1\)
+6.1 – while, for, do~while\(병훈\)  
+7.1 – 함수의 작성과 사용\(하영\)  
+8.1 – 배열의 선언과 사용 토 황주비  
+8.2 – 문자를 저장하는 배열 토 이인원  
+9.1 – 포인터의 기본 개념 토 조민주  
+10.1 – 배열과 포인터의 관계 월 백이주  
+10.2 – 배열을 처리하는 함수 월 조민주  
+12.1 – 문자열과 포인터 월 유하영  
+13.1 – 변수 사용 영역 수 권미경  
+13.2 – 함수의 데이터 공유 방법 수 백이주  
+14.1 – 2차원 배열 수 정진호  
+17.1 – 구조체 토 정진호  
+18.1 – 파일 개방과 입출력 토 이병훈  
+19.1 – 전처리 지시자 \(1\)토 권미경
 {% endtab %}
 
 {% tab title="참고 강의" %}
@@ -63,12 +63,32 @@ description: 인프런 강좌를 통해 C언어를 공부하는 스터디 모임
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">10. 22. 19:00</td>
+      <td style="text-align:left">10. 22. 월 19:00</td>
       <td style="text-align:left">부트</td>
       <td style="text-align:left">
         <p>오리엔테이션</p>
         <p>5.1. / 5.2.</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">10. 27 토 18:00 ~ 20:00</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">10. 29 월 17:00 ~ 19:00</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">10. 31 수 19:00 ~ 21:00</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">11. 03 토 18:00 ~ 20:00</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>## 시작하기
