@@ -1,5 +1,12 @@
 # Changelogs
 
+## 1.0.5 - 2018-10-24
+
+### Added
+
+* [Application Architecture](../documents/structure.md)
+* [Tasks](../documents/tasks.md)
+
 ## 1.0.4 - 2018-10-21
 
 ### Added
