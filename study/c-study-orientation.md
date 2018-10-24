@@ -74,7 +74,7 @@ int main() {
 
 1\) Ctrl + Shift + P 를 누른 뒤 나타나는 텍스트박스에 "Install Package"를 입력한후 엔터키를 누른다. \(다 입력하지 않아도 아래 표시가 되면 엔터를 눌러도 된다.\)
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
  2\) 잠시 기다리면 다시 텍스트박스가 나타나는데 "Increment Selection"을 입력한 후 엔터를 누른다. 설치가 완료될 때까지 기다리는데, 왼쪽 아래에 설치 현황을 확인할 수 있다.
 

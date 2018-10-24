@@ -7,6 +7,8 @@
 
 * [Initial Plans](documents/summary.md)
 * [Environments](documents/environments.md)
+* [Application Architecture](documents/structure.md)
+* [Tasks](documents/tasks.md)
 
 ## GUIDES
 
