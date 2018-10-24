@@ -26,5 +26,12 @@
 * [ ] Documentation
 * [ ] Make Intro Poster & Brochure
 
+## Potential tasks
+
+* [ ] Make prediction model of fine-dust or temperature data
+* [ ] Add visualized charts/dashboards of fine-dust or temp/humid data
+* [ ] Make mobile\(android/iOS\) app for service API data
+* [ ] Add remote controlling function of detector on webpage
+
 
 
