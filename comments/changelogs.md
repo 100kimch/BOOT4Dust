@@ -1,5 +1,11 @@
 # Changelogs
 
+## 1.0.6 - 2018-10-27
+
+### Added
+
+* [Initializing Raspberry Pi](../guides/initializing-raspberry-pi.md)
+
 ## 1.0.5 - 2018-10-24
 
 ### Added
