@@ -1,5 +1,12 @@
 # Changelogs
 
+## 1.0.7 - 2018-10-28
+
+### Added
+
+* [Setting AWS connection on Raspberry Pi](../guides/setting-aws-connection-on-raspberry-pi.md)
+* [Raspberry Pi Data Sender](../guides/raspberry-pi-python-code.md)
+
 ## 1.0.6 - 2018-10-27
 
 ### Added

@@ -17,6 +17,8 @@
 * [Arduino Introduction](guides/arduino-introduction.md)
 * [Putting Sensors to Arduino](guides/putting-sensors-to-arduino.md)
 * [Initializing Raspberry Pi](guides/initializing-raspberry-pi.md)
+* [Setting AWS connection on Raspberry Pi](guides/setting-aws-connection-on-raspberry-pi.md)
+* [Raspberry Pi Data Sender](guides/raspberry-pi-python-code.md)
 
 ## Study
 
