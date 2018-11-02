@@ -19,6 +19,7 @@
 * [Initializing Raspberry Pi](guides/initializing-raspberry-pi.md)
 * [Setting AWS connection on Raspberry Pi](guides/setting-aws-connection-on-raspberry-pi.md)
 * [Raspberry Pi Data Sender](guides/raspberry-pi-python-code.md)
+* [REST API References](guides/rest-api-references.md)
 
 ## Study
 

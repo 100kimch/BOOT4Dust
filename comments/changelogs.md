@@ -1,5 +1,11 @@
 # Changelogs
 
+## 1.0.8 - 2018-11-02
+
+### Modified
+
+* "BHT11" corrected to "DHT11"
+
 ## 1.0.7 - 2018-10-28
 
 ### Added

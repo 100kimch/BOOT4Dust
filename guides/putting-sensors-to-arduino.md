@@ -9,7 +9,7 @@ We've started this project from connecting Arduino to GP2Y1010AU0F, fine dust de
 | Materials | Description |
 | :--- | :--- |
 | Arduino Uno | Main processor |
-| BHT11 | Sense temperature and humidity |
+| DHT11 | Sense temperature and humidity |
 | GP2Y1010AU0F | Fine dust sensor |
 | Breadboard |  |
 | Jumper Cables |  |
