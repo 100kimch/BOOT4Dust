@@ -14,6 +14,7 @@
 
 ```bash
 $ sudo apt-get install bluetooth bluez bluez-tools
+$ sudo pip3 install pybluez
 $ sudo bluetoothctl
 ```
 

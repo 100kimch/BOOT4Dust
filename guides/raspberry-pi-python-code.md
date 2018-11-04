@@ -7,7 +7,7 @@ description: >-
 # Raspberry Pi Data Sender
 
 ```python
-from bluetooth import *
+from bluetooth import *  # sudo apt-get install bluetooth
 import datetime
 import json
 import time
@@ -30,8 +30,6 @@ SECRET_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 # Key derivation functions. See:
 # http://docs.aws.amazon.com/general/latest/gr/signature-v4-examples.html#signature-v4-examples-python
-
-
 def sign(key, msg):
     return hmac.new(key, msg.encode('utf-8'), hashlib.sha256).digest()
 
@@ -50,7 +48,7 @@ def awsRequest(requestBody):
     service = 'execute-api'
     host = 'apigateway.amazonaws.com'
     region = 'ap-northeast-2'
-    endpoint = 'https://idFromAPIGateway.execute-api.ap-northeast-2.amazonaws.com/prod/dust'
+    endpoint = 'https://hmwzfc5hga.execute-api.ap-northeast-2.amazonaws.com/prod/dust'
     content_type = 'application/json'
     # POST requests use a content type header. For DynamoDB,
     # the content is JSON.
@@ -128,7 +126,7 @@ def awsRequest(requestBody):
     # Put the signature information in a header named Authorization.
     authorization_header = algorithm + ' ' + 'Credential=' + ACCESS_KEY + '/' + \
         credential_scope + ', ' + 'SignedHeaders=' + \
-            signed_headers + ', ' + 'Signature=' + signature
+        signed_headers + ', ' + 'Signature=' + signature
 
     # For DynamoDB, the request can include any headers, but MUST include "host", "x-amz-date",
     # "x-amz-target", "content-type", and "Authorization". Except for the authorization
@@ -136,9 +134,9 @@ def awsRequest(requestBody):
     # noted earlier. Order here is not significant.
     # # Python note: The 'host' header is added automatically by the Python 'requests' library.
     headers = {'Content-Type': content_type,
-            'X-Amz-Date': amz_date,
-            'X-Api-key': API_KEY,
-            'Authorization': authorization_header}
+               'X-Amz-Date': amz_date,
+               'X-Api-key': API_KEY,
+               'Authorization': authorization_header}
 
     # ************* SEND THE REQUEST *************
     print('\nBEGIN REQUEST++++++++++++++++++++++++++++++++++++')
@@ -161,45 +159,72 @@ print('  Get bluetooth data from Arduino and send to AWS APIGateway.')
 print('')
 print('---------------------------------------------------------------')
 
-bd_addr = "00:18:E4:34:D1:C9"
-port = 1
+# bd_addr = "00:18:E4:35:48:0F"
+bd_addr = {
+    1: "00:18:E4:35:4A:D7",
+    2: "00:18:E4:35:48:09",
+    # 3: "00:18:E4:35:48:0F"
+}
+connected = []
+# port = 1
 period = 7.0
+sock = {}
 
-sock = BluetoothSocket(RFCOMM)
-sock.connect((bd_addr, port))
-print('[Msg] Bluetooth Socket Connected.\n[Msg] Data will be received in '+str(period)+' Seconds.')
+# print('[Msg] Connection Seccess\n[Msg] Data will be received in ' +
+#       str(period)+' Seconds.')
 while 1:
-    time.sleep(period)
-    data = sock.recv(100).decode('utf-8', 'ignore')
-    print('[Msg]' + str(data))
-    try:
-        check1 = data.index("{")
-        check2 = data[check1:].index("}") + check1
-        check = True
-    except ValueError:
-        check = False
-    if check:
-        data = data[check1+1:check2].split(':')
-        jsonData = {
-            'time': str(datetime.datetime.now()),
-            'id': data[0],
-            'dust': data[1],
-            'temp': data[2],
-            'humid': data[3]
-        }
-        print('[Msg] jsonData: ', jsonData)
-        print
-        awsRequest(json.dumps(jsonData))
+    for i in bd_addr:
+        try:
+            sock = BluetoothSocket(RFCOMM)
+            sock.connect((bd_addr[i], 1))
+            connected.append(i)
+            print('[Msg] Connection Success: (' + str(i) + ')', bd_addr[i])
+        except BluetoothError as err:
+            print('[Msg] Connection failed: (' + str(i) + ')' + bd_addr[i], err)
+            continue
+            
+        print('[Msg] Connection Success except error-occured devices.')
 
-        # uploadRate can be set in Arduino Code.
-        # period = float(data[4])
-        # print('[Msg] Sending rate changed to ' + data[4])
-        time.sleep(period)
-    else:
-        # When failed to get data:
-        time.sleep(period)
-sock.close()
+        time.sleep(period/2)
+
+        try:
+            sockRecv = sock.recv(100)
+        except BluetoothError as err:
+            print('[Msg] could not received data.')
+            continue
+        # print('[Dev] data:', sockRecv)
+        data = sockRecv.decode('utf-8', 'ignore')
+        print('[Msg]' + str(data))
+        try:
+            check1 = data.index("{")
+            check2 = data[check1:].index("}") + check1
+            check = True
+        except ValueError:
+            check = False
+        if check:
+            data = data[check1+1:check2].split(':')
+            jsonData = {
+                'time': str(datetime.datetime.now()),
+                'id': data[0],
+                'dust': data[1],
+                'temp': data[2],
+                'humid': data[3]
+            }
+            print('[Msg] jsonData: ', jsonData)
+            awsRequest(json.dumps(jsonData))
+
+            # uploadRate can be set in Arduino Code.
+            # period = float(data[4])
+            # print('[Msg] Sending rate changed to ' + data[4])
+            # time.sleep(period)
+        else:
+            print('[Msg] Failed to get data.')
+        sock.close()
+        time.sleep(period/2)
+
+        # print('[Msg] Socket Closed.')
 #############################
+
 
 ```
 
